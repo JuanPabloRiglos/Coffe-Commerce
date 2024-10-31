@@ -6,9 +6,11 @@ import { ItemsMenuMobile } from "./items-menu-mobile";
 import { ToggleTheme } from "./toggle-theme";
 //store
 import { useCart } from "@/hooks/use-cart";
+import { useLovedProducts } from "@/hooks/use-loved-products";
 export function Navbar() {
   const router = useRouter();
   const cart = useCart();
+  const {lovedItems} = useLovedProducts()
   return (
     <header className=" w-full flex justify-between items-center gap-4  p-2 px-6 text-slate-900  dark:text-slate-200">
       <h1
@@ -41,7 +43,7 @@ export function Navbar() {
 
         <Heart
           strokeWidth="1"
-          className="hover:text-red-500 hover:scale-110 hover:cursor-pointer hover:font-bold"
+          className={` hover:scale-110 hover:cursor-pointer hover:font-bold ${lovedItems.length > 0 && 'fill-black dark:fill-white'}`}
           onClick={() => router.push("/loved-products")}
         />
 

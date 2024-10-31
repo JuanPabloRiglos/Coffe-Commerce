@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 
 export function useGetFeaturedProducts() {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?filters[isFeature][$eq]=true&populate=*`;
-
+  
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  console.log('viendo result', result)
+
 
   useEffect(() => {
     //una funcion autollamada para podes usar async/await dento del effct.
@@ -14,7 +17,8 @@ export function useGetFeaturedProducts() {
       try {
         const res = await fetch(url);
         const json = await res.json();
-        setResult(json.data);
+        // console.log('llega',json.data)
+        setResult( json.data);
         setLoading(false);
       } catch (error: any) {
         setError(error);

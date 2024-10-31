@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Variables de entorno
+.env
+
+# Archivos de build de Strapi
+.cache/
+build/
+dist/
+
+# Configuración específica de tu sistema operativo (opcional)
+.DS_Store
+Thumbs.db

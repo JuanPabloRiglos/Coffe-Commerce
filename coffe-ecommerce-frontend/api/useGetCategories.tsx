@@ -6,11 +6,14 @@ export function useGetCategories() {
   const [loading, setLoading] = useState(true);
   const [error, seterror] = useState("");
 
+  
+
   useEffect(() => {
     (async () => {
       try {
         const res = await fetch(url);
         const json = await res.json();
+        // console.log('llega',json.data)
         setResult(json.data);
         setLoading(false);
       } catch (error: any) {

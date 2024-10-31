@@ -21,6 +21,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "stripe": "^17.3.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -35,5 +36,6 @@
   },
   "strapi": {
     "uuid": "7f1dc996-c22d-4c4c-ac28-433f6f2e5770"
-  }
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }
